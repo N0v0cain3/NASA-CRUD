@@ -7,8 +7,10 @@ interface Planet {
   [key: string]: string;
 }
 
+let planets: Array<Planet>;
+
 async function loadPlanetsData() {
-  const path = join("csv", "original.csv");
+  const path = join("data", "original.csv");
   const file = await Deno.open(path);
 
   const bufReader = new BufReader(file);
@@ -40,8 +42,10 @@ async function loadPlanetsData() {
   });
 }
 
-const newEarths = await loadPlanetsData();
-for (const planet of newEarths) {
-  console.log(planet);
+planets = await loadPlanetsData();
+
+console.log(`${planets.length} habitable planets found`);
+
+export function getAllPlanets() {
+  return planets;
 }
-console.log(`${newEarths.length} habitable planets found`);
