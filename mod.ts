@@ -11,9 +11,11 @@ app.use(async (ctx) => {
     "/stylesheets/style.css",
     "/images/favicon.png",
   ];
-  await send(ctx, filePath, {
-    root: `${Deno.cwd()}/public`,
-  });
+  if (fileWhitelist.includes(filePath)) {
+    await send(ctx, filePath, {
+      root: `${Deno.cwd()}/public`,
+    });
+  }
 });
 
 app.listen({ port });
