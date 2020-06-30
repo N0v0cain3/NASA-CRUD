@@ -3,6 +3,10 @@ import { Application, send } from "https://deno.land/x/oak/mod.ts";
 const app = new Application();
 const port = 8000;
 
+import api from "./api.ts";
+
+app.use(api.routes());
+app.use(api.allowedMethods());
 app.use(async (ctx) => {
   const filePath = ctx.request.url.pathname;
   const fileWhitelist = [
