@@ -31,20 +31,15 @@
       </div>
     </header>
 
-    <div id="sidebar">
-      <div id="sponsor">
-        <div class="quiet">We are going interstellar! </div>
-        <div class="sponsor">Explore planets beyond our solar system.</div>
-      </div>
-    </div>
 
     <main>
       <article id="launch">
         <p>Schedule a mission launch for interstellar travel to one of the Kepler Exoplanets.</p>
         <p>Only confirmed planets orbiting stars matching the following criteria are available for the earliest scheduled missions:
           <ul>
-            <li>1 M☉ (Solar Mass) ±10%</li>
-            <li>1 R☉ (Solar Radius) ±10%</li>
+            <li>0.78 M☉ < Solar Mass < 1.04 M☉</li>
+            <li>0.99 R☉ < Solar Radius < 1.01 R☉</li>
+            <li>0.50 R⊕ < Planetary Radius < 1.50 R⊕</li>
           </ul>
         </p>
         <form>
@@ -58,7 +53,7 @@
           </div>
           <div class="form-item">
             <label>Rocket Type          </label>
-            <input type="text" id="rocket-name" value="ZTM Experimental IS1" disabled />
+            <input type="text" id="rocket-name" value="SZB E-X-P" disabled />
           </div>
           <div class="form-item">
             <label>Destination Exoplanet</label>
@@ -76,7 +71,7 @@
       </article>
 
       <article id="upcoming" hidden>
-        <p>Upcoming missions including both SpaceX and Zero to Mastery rockets.</p>
+        <p>Upcoming missions including rockets.</p>
         <p>Warning! Clicking on the <span class="delete">✖</span> aborts the mission.</p>
         <div id="upcoming-list"></div>
       </article>
@@ -88,6 +83,9 @@
       This is not an official site and is not affiliated with NASA or SpaceX in any way. For educational purposes only.
     </div>
   </footer>
+  <video autoplay muted loop id="spacevideo">
+    <source src="videos/space.mp4" type="video/mp4">
+  </video>
 </body>
 
 </html>
