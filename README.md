@@ -21,6 +21,8 @@
 
 
 ## Screenshots
+<p align="center"><img src="https://github.com/N0v0cain3/NASA-CRUD/blob/master/gif.gif" alt="logo" /></a>
+</p>
 
 
 ## Instructions to run
