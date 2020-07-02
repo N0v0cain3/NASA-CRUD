@@ -1,0 +1,19 @@
+$ docker build -t n0v0cain3/nasa-crud .
+
+$ docker run -it -p 8000:8000 docker n0v0cain3/nasa-crud
+
+=====================================
+            To terminate
+=====================================
+$docker ps 
+    lists all the container id
+
+$docker stop <insert id>
+
+=====================================
+        To publish our image
+=====================================
+
+$docker push n0v0cain3/nasa-crud:latest
+
+
