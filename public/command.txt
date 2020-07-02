@@ -1,6 +1,6 @@
 $ docker build -t n0v0cain3/nasa-crud .
 
-$ docker run -it -p 8000:8000 docker n0v0cain3/nasa-crud
+$ docker run -it -p 8000:8000 n0v0cain3/nasa-crud
 
 =====================================
             To terminate
@@ -16,4 +16,22 @@ $docker stop <insert id>
 
 $docker push n0v0cain3/nasa-crud:latest
 
+=====================================
+        AWS EC2 setup
+=====================================
 
+Download SSH client
+
+AWS instance console --> connect
+
+$ sudo yum update
+
+$sudo yum install docker
+
+$sudo usermod -a -G  docker ec2-user
+
+=====================================
+             DEPLOY
+=====================================
+
+$ docker run -it -p 8000:8000 --restart=always n0v0cain3/nasa-crud
