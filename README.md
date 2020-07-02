@@ -15,20 +15,26 @@
 
 
 ## Features
-- Insert list of features here
+- Fetching data from SpaceX API
+- Create and Abort rocket launches 
+- Launch Control for rockets
 
 
 
 
 ## Screenshots
+<p align="center"><img src="https://github.com/N0v0cain3/NASA-CRUD/blob/master/gif.gif" alt="logo" /></a>
+</p>
 
 
 ## Instructions to run
 
 ```
-$ git clone https://github.com/N0v0cain3/<Project>
-$ cd <Project>
-$ deno run server.ts
+$ git clone https://github.com/N0v0cain3/NASA-CRUD.git
+$ cd NASA-CRUD
+$ deno run mod.ts
+	or
+$ denon start
 
 ```
 
